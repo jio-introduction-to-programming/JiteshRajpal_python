@@ -84,16 +84,18 @@ print(mode(List))
 
 
 ### Enter numbers as input and return sum of array
-k = int(input("Enter the value of k required: "))
+array_input = int(input("Enter the no. of elements in array required: "))
 array=[]
-for i in range(k):
-     j=int(input("Enter value at indexs required: "))
+for i in range(array_input):
+     j=int(input("Enter value in array required: "))
      array.append(j)
 
-start = int(input("Enter the start value required: "))
-end = int(input("Enter the end value required: "))
+k = int(input("Enter the Number of times you want to put start and end values: "))
+final_list= []
+for x in range(k):
+    start = int(input("Enter the start value required: "))
+    end = int(input("Enter the end value required: "))
+    a = int(sum(array[start:end]))
+    final_list.append(a)
 
-
-k = sum(array[start:end])
-
-print (k)
+print (final_list)
